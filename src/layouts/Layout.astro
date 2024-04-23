@@ -1,0 +1,51 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d1436;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  #banner {
+    clip-path: polygon(
+      50% 0%,
+      80% 0,
+      100% 0,
+      100% 70%,
+      88% 78%,
+      51% 100%,
+      16% 82%,
+      0 72%,
+      0% 35%,
+      0 0
+    );
+  }
+  #generator-footer {
+    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 51% 100%, 0 94%, 0 0);
+  }
+</style>

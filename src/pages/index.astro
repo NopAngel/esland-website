@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import BannerMain from "../components/BannerMain.astro";
+import BannerInfo from "../components/BannerInfo.astro";
+import BannerColabs from "../components/BannerColabs.astro";
+import BannerReddit from "../components/BannerReddit.astro";
+import Footer from "../components/Footer.astro";
+import BannerBG from "../components/BannerBG.astro";
+import BannerDescription from "../components/BannerDescription.astro";
+---
+
+<Layout title="Premios ESLAND">
+  <Navbar />
+  <main>
+    <section>
+      <article>
+        <BannerMain />
+        <BannerInfo />
+        <BannerBG />
+        <BannerDescription />
+        <BannerColabs />
+        <BannerReddit />
+      </article>
+    </section>
+  </main>
+  <Footer />
+</Layout>
